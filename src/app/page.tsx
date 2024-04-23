@@ -1,95 +1,46 @@
+"use client"; 
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import React, { useState } from 'react';
+
+
 export default function Home() {
+  
+  
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+      <h1  style={{textAlign: 'center'}}>EPLabs Mo</h1>
+      <p>Help Us EP Labs Pay Their Instructor</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <table border="10">
+  
+    <tr>
+    <td style={{textAlign: 'center'}}>Table</td>
+  
+  </tr> 
+  <tr>
+    <th style={{backgroundColor: 'red'}}>Header 1</th>
+    <th style={{backgroundColor: 'orange'}}>Header 2</th> 
+    <th style={{backgroundColor: 'yellow'}}>Header 3</th>
+  </tr>
+  <tr>
+    <td style={{backgroundColor: 'red'}}> Column 1</td>
+    <td style={{backgroundColor: 'orange'}}> Column 2</td>
+    <td style={{backgroundColor: 'yellow'}}> Column 3</td>
+    
+  </tr>
+</table>
+</div>
+<form action="/send-data-here" method="post">
+  <label for="first">UserName:</label>
+  <input type="text" id="first" name="first" /> <br></br><br></br>
+  <label for="last">Input:</label>
+  <input type="text" id="last" name="last" />
+  <button type="submit" style={{backgroundColor: 'green' }}>Donate</button>
+</form>
+  {/* the issue with the error is for the word for line 37 */}
+          </main>
   );
 }
